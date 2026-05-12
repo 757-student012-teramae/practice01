@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\http\Controllers\MessageController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -15,3 +16,5 @@ Route::patch('/profile/update', [HomeController::class, 'update'])->name('profil
 
 // STEP5オプション問題用
 Route::delete('/users/delete', [HomeController::class, 'destroy'])->name('users.delete');
+
+Route::resource('messages', MessageController::class);

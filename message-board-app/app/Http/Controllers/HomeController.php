@@ -3,14 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Message;
 
 class HomeController extends Controller
 {
     public function index()
     {
         //
-        $messages = Messages::all();
-        return view(route('home.index'), ['messages' => $messages]);
+        $messages = Message::all();
+        return view('home.index', ['messages' => $messages]);
     }
 
      // STEP4オプション問題用
