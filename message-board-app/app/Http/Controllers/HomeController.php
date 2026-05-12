@@ -9,7 +9,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        //
+        // hello world!
         $messages = Message::all();
         return view('home.index', ['messages' => $messages]);
     }
